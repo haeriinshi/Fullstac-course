@@ -1,0 +1,83 @@
+@import './utils/fonts';
+
+@import './utils/variables';
+
+/* Base */
+
+@import './base';
+
+@import './utils/utils';
+
+.section {
+    padding: 20px 0;
+    
+    @media screen and (min-width: $bp-tablet) {
+        padding: 48px 0;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Button */
+
+@import './components/button';
+
+/* Links */
+
+@import './components/links';
+
+address {
+    font-style: normal;
+}
+
+/* Header */
+
+@import './layouts/header';
+
+@import './layouts/mobile-menu';
+
+/* Hero section */
+
+@import './layouts/hero';
+
+/* Advantages section */
+
+@import './layouts/advantages';
+
+/* Tradition section */
+
+@import './layouts/traditions';
+
+/* Chefs section */ 
+
+@import './layouts/chefs';
+
+/* Formats section */
+
+@import './layouts/formats';
+@import './components/pagination';
+
+/* Carousel */
+
+@import './components/carousel';
+
+/* Contacts section */
+
+@import './layouts/contacts';
+
+/* Footer */
+
+@import './layouts/footer';
+
+/* Modal window */
+
+@import './layouts/modal-window';
+
+/* Form */
+
+@import './components/form';
