@@ -10,52 +10,60 @@
 
 .footer::before,
 .footer::after {
+    display: none;
     position: absolute;
     bottom: 0;
     background-repeat: no-repeat;
     content: '';
+
+    @media screen and (min-width: $bp-tablet) {
+        display: block;
+    }
 }
 
 .footer::before {
-    width: 180px;
-    height: 120px;
-    left: 0;
-    background-image: url(../images/decor-bread-small.png);
+    @media screen and (min-width: $bp-tablet) {
+        width: 180px;
+        height: 120px;
+        left: 0;
+        background-image: url(../images/decor-bread-small.png);
+    }
 }
 
 .footer::after {
-    width: 380px;
-    height: 190px;
-    right: 0;
-    background-image: url(../images/decor-bread-large.png);
+    @media screen and (min-width: $bp-tablet) {
+        width: 380px;
+        height: 190px;
+        right: 0;
+        background-image: url(../images/decor-bread-large.png);
+    }
 }
 
-.link-footer {
-    color: var(--color-primary-light);
-    text-decoration: none;
-}
-
+.link-footer,
 .address-footer {
     color: var(--color-primary-light);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
+
+    @media screen and (min-width: $bp-desktop) {
+        font-size: 18px;
+        font-weight: 400;
+    }
 }
 
 .address-footer.accent {
     color: var(--color-secondary-dark);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 400;
 }
 
 .footer-container {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 16px; 
 
     @media screen and (min-width: $bp-tablet) {
         flex-direction: row;
+        gap: 28px;
     }
 }
 
@@ -63,12 +71,13 @@
 .footer-adress {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 16px;
     text-align: center;
 
     @media screen and (min-width: $bp-tablet) {
         flex-direction: row;
         flex-basis: 50%;
+        gap: 28px;
         text-align: left;
     }
 }
@@ -78,6 +87,27 @@
     flex-grow: 1;
 }
 
+.footer-logo {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: $bp-tablet) {
+        justify-content: flex-start;
+    }
+}
+
+.footer-logo img {
+    width: 72px;
+    height: 38px;
+    object-fit: contain;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+        width: auto;
+        height: auto;
+    }
+}
+
 .adress-list,
 .adress-info {
     flex-grow: 1;
@@ -85,4 +115,70 @@
 
 .adress-icon {
     fill: var(--color-primary-light);
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media screen and (min-width: $bp-tablet) {
+        gap: 16px;
+    }
+}
+
+.adress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+        gap: 16px;
+        margin-bottom: 0;
+    }
+}
+
+.adress-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.adress-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media screen and (min-width: $bp-tablet) {
+        gap: 16px;
+    }
+}
+
+.footer-adress-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+        align-items: flex-start;
+    }
+}
+
+.address-footer__location {
+    display: inline-block;
+    max-width: 196px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $bp-tablet) {
+        max-width: none;
+        margin: 0;
+    }
 }
